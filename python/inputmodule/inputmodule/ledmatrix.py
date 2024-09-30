@@ -2,8 +2,8 @@ import time
 
 import serial
 
-from inputmodule import font
-from inputmodule.inputmodule import (
+import font
+from inputmodule import (
     send_command,
     CommandVals,
     PatternVals,

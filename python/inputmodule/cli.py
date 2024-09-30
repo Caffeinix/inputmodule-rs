@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 import argparse
+import os
 import sys
 
 # Need to install
 from serial.tools import list_ports
 
 # Local dependencies
-from inputmodule import gui
-from inputmodule.inputmodule import (
+import gui
+from inputmodule import (
     INPUTMODULE_PIDS,
     send_command,
     get_version,
@@ -18,15 +19,15 @@ from inputmodule.inputmodule import (
     GameOfLifeStartParam,
     GameControlVal,
 )
-from inputmodule.gui.games import (
+from gui.games import (
     snake,
     snake_embedded,
     pong_embedded,
     game_of_life_embedded,
     wpm_demo,
 )
-from inputmodule.gui.ledmatrix import random_eq, clock, blinking
-from inputmodule.inputmodule.ledmatrix import (
+from gui.ledmatrix import random_eq, clock, blinking
+from inputmodule.ledmatrix import (
     eq,
     breathing,
     camera,
@@ -44,7 +45,7 @@ from inputmodule.inputmodule.ledmatrix import (
     image_bl,
     image_greyscale,
 )
-from inputmodule.inputmodule.b1display import (
+from inputmodule.b1display import (
     b1image_bl,
     invert_screen_cmd,
     screen_saver_cmd,
@@ -56,7 +57,7 @@ from inputmodule.inputmodule.b1display import (
     display_on_cmd,
     display_string,
 )
-from inputmodule.inputmodule.c1minimal import (
+from inputmodule.c1minimal import (
     set_color,
     get_color,
     RGB_COLORS,
